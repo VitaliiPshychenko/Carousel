@@ -44,4 +44,8 @@
 .next {
   right: -60px;
 }
+
+.disabled {
+  opacity: 0.5;
+}
 /*# sourceMappingURL=style.css.map */
