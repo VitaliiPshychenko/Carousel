@@ -4,27 +4,23 @@ const slides = document.querySelector('.container')
 
 
 
-function addDisable() {
+function changeDisable() {
   if (slides.scrollLeft === 0) {
     prev.classList.add('disabled');
-  }
-
-  else if (slides.scrollLeft === 910) {
+  } else if (slides.scrollLeft === slides.scrollWidth - 390) {
     next.classList.add('disabled');
-  }
-
-  else {
+  } else {
     prev.classList.remove('disabled');
     next.classList.remove('disabled');
   }
 }
 
-next.onclick = function() {
+next.addEventListener('click', () => {
   slides.scrollLeft += 390;
-  addDisable();
-}
+  changeDisable();
+})
 
-prev.onclick = function() {
+prev.addEventListener('click', () => {
   slides.scrollLeft -= 390;
-  addDisable();
-}
+  changeDisable();
+})
