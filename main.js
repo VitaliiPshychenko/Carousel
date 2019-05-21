@@ -2,8 +2,6 @@ const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const slides = document.querySelector('.container')
 
-
-
 function changeDisable() {
   if (slides.scrollLeft === 0) {
     prev.classList.add('disabled');
